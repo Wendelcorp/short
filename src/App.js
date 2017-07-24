@@ -1,11 +1,29 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import SearchForm from './components/SearchForm'
+// import SearchForm from './components/SearchForm'
 import Domain from './components/Domain'
 import './App.css';
 
 class App extends Component {
+  constructor(props){
+    super(props);
+
+    this.state = {
+      myLink : ""
+    };
+  }
+  onSubmit(e) {
+    e.preventDefault()
+    console.log(this.refs.submit.value)
+
+    this.setState({
+      myLink: this.refs.submit.value
+    })
+    let submit = this.refs.submit;
+    submit.value = "";
+  }
   render() {
+
     return (
       <div className="App">
         <div className="App-header">
@@ -15,7 +33,10 @@ class App extends Component {
         <p className="App-intro">
           The emoji domain shortener.
         </p>
-        <SearchForm />
+        <form onSubmit={this.onSubmit.bind(this)}>
+          <input type="text" ref="submit"/>
+        </form>
+        <h2><a href={this.state.myLink}>{this.state.myLink}</a></h2>
         <Domain name="🎵🦄.ws" />
         <Domain name="📖👓.ws" />
         <Domain name="💚💜.ws" />
@@ -25,4 +46,5 @@ class App extends Component {
     );
   }
 }
+
 export default App;
