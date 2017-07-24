@@ -24,6 +24,75 @@ class App extends Component {
     this.setState({
       myLink: this.refs.submit.value
     })
+
+    fetch('http://www.xn--ml8h46g.ws/new', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        'long_url': this.refs.submit.value,
+      })
+    }).then(res => {
+      return res.json();
+    }).then(json => {
+      console.log(json)
+      this.setState({
+        url1: json.short_id
+      })
+    })
+
+    fetch('http://www.xn--4p8hfi.ws/new', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        'long_url': this.refs.submit.value,
+      })
+    }).then(res => {
+      return res.json();
+    }).then(json => {
+      console.log(json)
+      this.setState({
+        url2: json.short_id
+      })
+    })
+
+    fetch('http://www.xn--5r8hea.ws/new', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        'long_url': this.refs.submit.value,
+      })
+    }).then(res => {
+      return res.json();
+    }).then(json => {
+      console.log(json)
+      this.setState({
+        url3: json.short_id
+      })
+    })
+
+    fetch('http://www.xn--ss8hpa.ws/new', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        'long_url': this.refs.submit.value,
+      })
+    }).then(res => {
+      return res.json();
+    }).then(json => {
+      console.log(json)
+      this.setState({
+        url4: json.short_id
+      })
+    })
+
     fetch('http://www.xn--cr8hf6a.ws/new', {
       method: 'POST',
       headers: {
@@ -40,6 +109,7 @@ class App extends Component {
         url5: json.short_id
       })
     })
+
     let submit = this.refs.submit;
     submit.value = "";
   }
