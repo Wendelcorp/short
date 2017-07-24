@@ -1,7 +1,7 @@
 {
   "name": "shortly",
   "version": "0.1.0",
-  "homepage": "https://wendelcorp.github.io/short/",
+  "homepage": "http://shortly.io",
   "private": true,
   "dependencies": {
     "gh-pages": "^1.0.0",
