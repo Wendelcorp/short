@@ -55,11 +55,11 @@ class App extends Component {
           <input type="text" ref="submit"/>
         </form>
         <a href={this.state.myLink}>{this.state.myLink}</a>
-        <Domain name="🎵🦄.ws" ext={this.state.url1}/>
-        <Domain name="📖👓.ws" ext={this.state.url2}/>
-        <Domain name="💚💜.ws" ext={this.state.url3}/>
-        <Domain name="💸💰.ws" ext={this.state.url4}/>
-        <Domain name="🚀👽.ws" ext={this.state.url5}/>
+        <Domain name="🎵🦄.ws" ext={this.state.ext}/>
+        <Domain name="📖👓.ws" ext={this.state.ext}/>
+        <Domain name="💚💜.ws" ext={this.state.ext}/>
+        <Domain name="💸💰.ws" ext={this.state.ext}/>
+        <Domain name="🚀👽.ws" ext={this.state.ext}/>
       </div>
     );
   }
