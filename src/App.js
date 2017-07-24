@@ -30,7 +30,7 @@ class App extends Component {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        'long_url': 'this.refs.submit.value',
+        'long_url': this.refs.submit.value,
       })
     }).then(res => {
       return res.json();

@@ -5,7 +5,7 @@ class Domain extends Component {
 
     return (
       <div className="domain">
-        <a href={"http://" + this.props.name + "/" + this.props.ext}><h1>{this.props.name + "/" + this.props.ext}</h1></a>
+        <a href={"http://www." + this.props.name + "/" + this.props.ext}><h1>{this.props.name + "/" + this.props.ext}</h1></a>
         COPY
       </div>
     );
