@@ -10,15 +10,35 @@ class App extends Component {
 
     this.state = {
       myLink : "",
-      ext : "abc"
+      ext : "abc",
+      url1 : "...",
+      url2 : "...",
+      url3 : "...",
+      url4 : "...",
+      url5 : "...",
     };
   }
   onSubmit(e) {
     e.preventDefault()
     console.log(this.refs.submit.value)
-
     this.setState({
       myLink: this.refs.submit.value
+    })
+    fetch('http://www.xn--cr8hf6a.ws/new', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        'long_url': 'this.refs.submit.value',
+      })
+    }).then(res => {
+      return res.json();
+    }).then(json => {
+      console.log(json)
+      this.setState({
+        url5: json.short_id
+      })
     })
     let submit = this.refs.submit;
     submit.value = "";
@@ -38,11 +58,11 @@ class App extends Component {
           <input type="text" ref="submit"/>
         </form>
         <a href={this.state.myLink}>{this.state.myLink}</a>
-        <Domain name="🎵🦄.ws" ext={this.state.ext}/>
-        <Domain name="📖👓.ws" ext={this.state.ext}/>
-        <Domain name="💚💜.ws" ext={this.state.ext}/>
-        <Domain name="💸💰.ws" ext={this.state.ext}/>
-        <Domain name="🚀👽.ws" ext={this.state.ext}/>
+        <Domain name="🎵🦄.ws" ext={this.state.url1}/>
+        <Domain name="📖👓.ws" ext={this.state.url2}/>
+        <Domain name="💚💜.ws" ext={this.state.url3}/>
+        <Domain name="💸💰.ws" ext={this.state.url4}/>
+        <Domain name="🚀👽.ws" ext={this.state.url5}/>
       </div>
     );
   }
