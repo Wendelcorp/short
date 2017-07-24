@@ -9,7 +9,8 @@ class App extends Component {
     super(props);
 
     this.state = {
-      myLink : ""
+      myLink : "",
+      ext : "abc"
     };
   }
   onSubmit(e) {
@@ -36,12 +37,12 @@ class App extends Component {
         <form onSubmit={this.onSubmit.bind(this)}>
           <input type="text" ref="submit"/>
         </form>
-        <h2><a href={this.state.myLink}>{this.state.myLink}</a></h2>
-        <Domain name="🎵🦄.ws" />
-        <Domain name="📖👓.ws" />
-        <Domain name="💚💜.ws" />
-        <Domain name="💸💰.ws" />
-        <Domain name="🚀👽.ws" />
+        <a href={this.state.myLink}>{this.state.myLink}</a>
+        <Domain name="🎵🦄.ws" ext={this.state.ext}/>
+        <Domain name="📖👓.ws" ext={this.state.ext}/>
+        <Domain name="💚💜.ws" ext={this.state.ext}/>
+        <Domain name="💸💰.ws" ext={this.state.ext}/>
+        <Domain name="🚀👽.ws" ext={this.state.ext}/>
       </div>
     );
   }
