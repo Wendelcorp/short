@@ -37,7 +37,6 @@ class App extends Component {
 
     let submit = this.refs.submit;
     submit.value = "";
-    document.getElementsByClassName('domain').opacity = "1";
   }
   render() {
 
