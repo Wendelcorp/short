@@ -45,7 +45,9 @@ class App extends Component {
     return (
       <div className="App">
         <form onSubmit={this.onSubmit.bind(this)}>
-          <input type="text" ref="submit" placeholder="Drop a link.."/>
+          <input className="big-field" type="text" ref="submit" placeholder="Drop a link..."/>
+          <br/>
+          <input className="big-button" type="submit" value="Make it shrink" />
         </form>
         <a className="long-url" href={this.state.myLink}>{this.state.myLink}</a>
         <Domain name="🎵🦄.ws" ext={this.state.ext}/>
