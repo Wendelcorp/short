@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Domain from './components/Domain'
+import ClipboardButton from 'react-clipboard.js';
 import './App.css';
 
 class App extends Component {
@@ -47,18 +48,28 @@ class App extends Component {
     return (
       <div className="App">
         <form onSubmit={this.onSubmit.bind(this)}>
-          <input className="big-field" type="text" ref="submit" placeholder="Drop a link..."/>
+          <input className="big-field" type="text" ref="submit" placeholder="drop a link..."/>
           <br/>
-          <input className="big-button" type="submit" value="Make it shrink" />
+          <input className="big-button" type="submit" value="make it shrink" />
         </form>
         <p style={{visibility:this.state.visi, opacity:"0.4"}} className="long-url">{this.state.myLink}</p>
         <h4 style={{visibility:this.state.visi}}>↓ click to copy ↓</h4>
         <div style={{opacity:this.state.opac}} className="links">
-          <Domain name="🎵🦄.ws" ext={this.state.ext}/>
-          <Domain name="📖👓.ws" ext={this.state.ext}/>
-          <Domain name="💚💜.ws" ext={this.state.ext}/>
-          <Domain name="💸💰.ws" ext={this.state.ext}/>
-          <Domain name="🚀👽.ws" ext={this.state.ext}/>
+          <ClipboardButton data-clipboard-text={"🎵🦄.ws/" + this.state.ext}>
+            <Domain name="🎵🦄.ws" ext={this.state.ext}/>
+          </ClipboardButton><br/>
+          <ClipboardButton data-clipboard-text={"📖👓.ws/" + this.state.ext}>
+            <Domain name="📖👓.ws" ext={this.state.ext}/>
+          </ClipboardButton><br/>
+          <ClipboardButton data-clipboard-text={"💚💜.ws/" + this.state.ext}>
+            <Domain name="💚💜.ws" ext={this.state.ext}/>
+          </ClipboardButton><br/>
+          <ClipboardButton data-clipboard-text={"💸💰.ws/" + this.state.ext}>
+            <Domain name="💸💰.ws" ext={this.state.ext}/>
+          </ClipboardButton><br/>
+          <ClipboardButton data-clipboard-text={"🚀👽.ws/" + this.state.ext}>
+            <Domain name="🚀👽.ws" ext={this.state.ext}/>
+          </ClipboardButton>
         </div>
       </div>
     );

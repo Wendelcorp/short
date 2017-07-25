@@ -4,8 +4,10 @@
   "homepage": "http://shortly.io",
   "private": true,
   "dependencies": {
+    "clipboard": "^1.7.1",
     "gh-pages": "^1.0.0",
     "react": "^15.6.1",
+    "react-clipboard.js": "^1.1.2",
     "react-dom": "^15.6.1",
     "react-form-field": "^0.1.2"
   },
