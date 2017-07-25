@@ -44,17 +44,10 @@ class App extends Component {
 
     return (
       <div className="App">
-        <div className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h2>Shortly</h2>
-        </div>
-        <p className="App-intro">
-          The emoji domain shortener.
-        </p>
         <form onSubmit={this.onSubmit.bind(this)}>
-          <input type="text" ref="submit"/>
+          <input type="text" ref="submit" placeholder="Drop a link.."/>
         </form>
-        <a href={this.state.myLink}>{this.state.myLink}</a>
+        <a className="long-url" href={this.state.myLink}>{this.state.myLink}</a>
         <Domain name="🎵🦄.ws" ext={this.state.ext}/>
         <Domain name="📖👓.ws" ext={this.state.ext}/>
         <Domain name="💚💜.ws" ext={this.state.ext}/>
