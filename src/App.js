@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-// import SearchForm from './components/SearchForm'
 import Domain from './components/Domain'
 import './App.css';
 
@@ -39,6 +37,7 @@ class App extends Component {
 
     let submit = this.refs.submit;
     submit.value = "";
+    document.getElementsByClassName('domain').opacity = "1";
   }
   render() {
 

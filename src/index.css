@@ -53,6 +53,9 @@ input.big-button {
   background: linear-gradient(to right, #348AC7, #7474BF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   cursor: pointer;
 }
+input.big-button:hover {
+  filter: brightness(92%);
+}
 .width-control {
   max-width: 1000px;
   margin: 0 auto;
