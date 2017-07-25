@@ -9,6 +9,8 @@ class App extends Component {
     this.state = {
       myLink : "",
       ext : "...",
+      visi : "hidden",
+      opac : "0.2"
     };
   }
   onSubmit(e) {
@@ -31,7 +33,9 @@ class App extends Component {
     }).then(json => {
       console.log(json)
       this.setState({
-        ext: json.short_id
+        ext: json.short_id,
+        visi : "visible",
+        opac : "1"
       })
     })
 
@@ -47,9 +51,9 @@ class App extends Component {
           <br/>
           <input className="big-button" type="submit" value="Make it shrink" />
         </form>
-        <a style={{visibility:'hidden'}} className="long-url" href={this.state.myLink}>{this.state.myLink}</a>
-        <h4 style={{visibility:'hidden'}}>Just copy and share!</h4>
-        <div style={{opacity:'0.2'}} className="links">
+        <a style={{visibility:this.state.visi}} className="long-url" href={this.state.myLink}>{this.state.myLink}</a>
+        <h4 style={{visibility:this.state.visi}}>↓ click to copy ↓</h4>
+        <div style={{opacity:this.state.opac}} className="links">
           <Domain name="🎵🦄.ws" ext={this.state.ext}/>
           <Domain name="📖👓.ws" ext={this.state.ext}/>
           <Domain name="💚💜.ws" ext={this.state.ext}/>
