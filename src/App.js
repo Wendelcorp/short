@@ -7,7 +7,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      myLink : "+",
+      myLink : "",
       ext : "...",
     };
   }
@@ -47,13 +47,15 @@ class App extends Component {
           <br/>
           <input className="big-button" type="submit" value="Make it shrink" />
         </form>
-        <a className="long-url" href={this.state.myLink}>{this.state.myLink}</a>
-        <h4>Just copy and share!</h4>
-        <Domain style={{color:'red'}} name="🎵🦄.ws" ext={this.state.ext}/>
-        <Domain name="📖👓.ws" ext={this.state.ext}/>
-        <Domain name="💚💜.ws" ext={this.state.ext}/>
-        <Domain name="💸💰.ws" ext={this.state.ext}/>
-        <Domain name="🚀👽.ws" ext={this.state.ext}/>
+        <a style={{visibility:'hidden'}} className="long-url" href={this.state.myLink}>{this.state.myLink}</a>
+        <h4 style={{visibility:'hidden'}}>Just copy and share!</h4>
+        <div style={{opacity:'0.2'}} className="links">
+          <Domain name="🎵🦄.ws" ext={this.state.ext}/>
+          <Domain name="📖👓.ws" ext={this.state.ext}/>
+          <Domain name="💚💜.ws" ext={this.state.ext}/>
+          <Domain name="💸💰.ws" ext={this.state.ext}/>
+          <Domain name="🚀👽.ws" ext={this.state.ext}/>
+        </div>
       </div>
     );
   }
