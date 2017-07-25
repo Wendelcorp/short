@@ -51,7 +51,7 @@ class App extends Component {
           <br/>
           <input className="big-button" type="submit" value="Make it shrink" />
         </form>
-        <a style={{visibility:this.state.visi}} className="long-url" href={this.state.myLink}>{this.state.myLink}</a>
+        <p style={{visibility:this.state.visi, opacity:"0.4"}} className="long-url">{this.state.myLink}</p>
         <h4 style={{visibility:this.state.visi}}>↓ click to copy ↓</h4>
         <div style={{opacity:this.state.opac}} className="links">
           <Domain name="🎵🦄.ws" ext={this.state.ext}/>
