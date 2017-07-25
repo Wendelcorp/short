@@ -50,6 +50,7 @@ class App extends Component {
           <input className="big-button" type="submit" value="Make it shrink" />
         </form>
         <a className="long-url" href={this.state.myLink}>{this.state.myLink}</a>
+        <h4>Just copy and share!</h4>
         <Domain name="🎵🦄.ws" ext={this.state.ext}/>
         <Domain name="📖👓.ws" ext={this.state.ext}/>
         <Domain name="💚💜.ws" ext={this.state.ext}/>

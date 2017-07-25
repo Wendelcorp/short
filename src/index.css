@@ -6,7 +6,9 @@ body {
   color: #555970;
 }
 h1 {
-  font-size: 22px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: #7474bf;
 }
 h2 {
   font-weight: lighter;
@@ -15,6 +17,10 @@ h2 {
 h3 {
   font-weight: lighter;
   font-size: 30px;
+}
+h4 {
+  font-weight: lighter;
+  font-size: 14px;
 }
 input.big-field {
   width: 380px;
@@ -45,8 +51,8 @@ input.big-button {
   background: #7474BF;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #348AC7, #7474BF);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #348AC7, #7474BF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  cursor: pointer;
 }
-
 .width-control {
   max-width: 1000px;
   margin: 0 auto;
@@ -60,4 +66,21 @@ input.big-button {
 .long-url {
   text-decoration: none;
   color: #555970;
+}
+.short-url {
+  cursor: crosshair;
+}
+.domain {
+  max-width: 300px;
+  margin: 0 auto;
+}
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  /*background-color: #ECF0F8;*/
+  text-align: center;
+  font-size: 12px;
 }
