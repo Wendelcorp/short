@@ -78,6 +78,7 @@ input.big-button:hover {
   margin: 0 auto;
 }
 .footer {
+  display: none;
   position: absolute;
   right: 0;
   bottom: 0;
