@@ -78,7 +78,6 @@ input.big-button:hover {
   color: #555970;
 }
 .short-url {
-  cursor: crosshair;
 }
 .domain {
   max-width: 300px;
@@ -87,7 +86,6 @@ input.big-button:hover {
 button {
     align-items: flex-start;
     text-align: center;
-    cursor: default;
     color: buttontext;
     background: none;
     box-sizing: border-box;
@@ -100,6 +98,7 @@ button {
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
     color: #555970;
+    cursor: crosshair;
 }
 button:focus {
     outline: none;
