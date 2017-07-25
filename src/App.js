@@ -20,7 +20,7 @@ class App extends Component {
       myLink: this.refs.submit.value
     })
 
-    fetch('http://www.xn--ml8h46g.ws/new', {
+    fetch('http://shortly-api.herokuapp.com/new', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
