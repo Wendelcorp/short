@@ -6,3 +6,14 @@
   text-decoration: none;
   color: #555970;
 }
+
+.copied {
+}
+
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
