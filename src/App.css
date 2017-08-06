@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .domain a {
@@ -8,12 +9,4 @@
 }
 
 .copied {
-}
-
-.visible {
-  visibility: visible;
-}
-
-.invisible {
-  visibility: hidden;
 }
